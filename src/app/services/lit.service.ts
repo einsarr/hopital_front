@@ -1,37 +1,34 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Lit } from '../models/Lit.Model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LitService {
 
-  baseUrl:string = "http://localhost:8565";
+  baseUrl:string = "http://localhost:3000";
 
   constructor(private http:HttpClient) { }
 
-      public getEnseignants():Observable<Array<Enseignant>>{
-          return this.http.get<Array<Enseignant>>(this.baseUrl+"/enseignants");
+      public getLits():Observable<Array<Lit>>{
+          return this.http.get<Array<Lit>>(this.baseUrl+"/lits");
       }
 
-      public deleteEnseignant(enseignant:Enseignant){
-        return this.http.delete<Enseignant>(this.baseUrl+"/enseignant/"+enseignant.enseignantId);
+      public deleteLit(lit:Lit){
+        return this.http.delete<Lit>(this.baseUrl+"/lits/"+lit.id);
       }
 
-      saveEnseignant(enseignant:Enseignant){
-        return this.http.post<Enseignant>(this.baseUrl+"/enseignant",enseignant);
+      saveLit(lit:Lit){
+        return this.http.post<Lit>(this.baseUrl+"/lits",lit);
       }
 
-      getEnseignantById(enseignantId: number){
-        return this.http.get<Enseignant>(this.baseUrl+"/enseignant/"+enseignantId);
+      getLitById(litId: number){
+        return this.http.get<Lit>(this.baseUrl+"/lits/"+litId);
       }
 
-      updateEnseignant(enseignant:Enseignant){
-        return this.http.put<Enseignant>(this.baseUrl+"/enseignant/"+enseignant.enseignantId,enseignant);
-      }
-
-      public getSpecialites():Observable<Array<Specialite>>{
-        return this.http.get<Array<Specialite>>(this.baseUrl+"/specialites");
+      updateLit(lit:Lit){
+        return this.http.put<Lit>(this.baseUrl+"/lits/"+lit.id,lit);
       }
 }

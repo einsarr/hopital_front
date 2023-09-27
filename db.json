@@ -1,130 +1,139 @@
 {
-    "users":[
-        {
-            "id":"moussa",
-            "name":"Moussa SARR",
-            "password":"P@sser2023",
-            "email":"einsarr@gmail.com",
-            "gender":"male",
-            "role":"admin",
-            "isActive":true
-        },
-        {
-            "id":"sarr",
-            "name":"Moussa SARR",
-            "password":"P@sser2023",
-            "email":"einsarrdds@gmail.com",
-            "gender":"male",
-            "role":"admin",
-            "isActive":false
-        },
-        {
-            "id":"sy",
-            "name":"Fallou Sy",
-            "password":"P@sser2023",
-            "email":"einsareedsr@gmail.com",
-            "gender":"male",
-            "role":"admin",
-            "isActive":false
-        },
-        {
-            "id":"kane",
-            "name":"Ibrahima KANE",
-            "password":"P@sser2023",
-            "email":"einsarssrffddr@gmail.com",
-            "gender":"male",
-            "role":"admin",
-            "isActive":true
-        }
-    ],
-    "lits":[
-        {
-            "id":"1",
-            "nom_lit":"Mark",
-            "type_lit":"lit de soins intensifs",
-            "salle":"Salle 1",
-            "disponibilite":false,
-            "Monitoring":true,
-            "Oxygène":true
-        },
-        {
-            "id":"2",
-            "nom_lit":"Mardfhfhk",
-            "type_lit":"lit pédiatrique",
-            "salle":"Salle 2",
-            "disponibilite":true,
-            "Monitoring":true,
-            "Oxygène":false
-        },
-        {
-            "id":"3",
-            "nom_lit":"Mardfhfhk",
-            "type_lit":"lit plat en dortoir",
-            "salle":"Salle 3",
-            "disponibilite":true,
-            "Monitoring":false,
-            "Oxygène":true
-        },
-        {
-            "id":"4",
-            "nom_lit":"Mardfhfhk",
-            "type_lit":"lit motorisé",
-            "salle":"Salle 4",
-            "disponibilite":true,
-            "Monitoring":true,
-            "Oxygène":false
-        }
-    ],
-    "salles":[
-        {
-            "id":"1",
-            "nom_salle":"Mark",
-            "Service":"Hospitalisation en pédiatrie",
-            "type_salle":"Hospitalisation en pédiatrie",
-            "disponibilité":false
-        },
-        {
-            "id":"2",
-            "nom_salle":"Mardfhfhk",
-            "Service":"Hospitalisation de jour",
-            "type_salle":"Hospitalisation en pédiatrie",
-            "disponibilité":true
-        },
-        {
-            "id":"3",
-            "nom_salle":"Mark ghg",
-            "Service":"Hospitalisation en soins intensifs",
-            "type_salle":"Hospitalisation en pédiatrie",
-            "disponibilité":false
-        },
-        {
-            "id":"4",
-            "nom_salle":"Marknn njiy",
-            "Service":"Marknn njiy",
-            "type_salle":"Hospitalisation en traumatologie",
-            "disponibilité":true
-        }
-    ],
-    "services":[
-        {
-            "id":"1",
-            "nom_service":"médecine générale",
-            "disponibilité":false
-        },
-        {
-            "id":"2",
-            "nom_service":"chirurgie",
-            "disponibilité":true
-        },
-        {
-            "id":"3",
-            "nom_service":"pneumologie",
-            "disponibilité":false
-        },
-        {
-            "id":"4",
-            "nom_service":"cardiologie",
-            "disponibilité":true
-        }
-    ]
+  "users": [
+    {
+      "id": "moussa",
+      "name": "Moussa SARR",
+      "password": "P@sser2023",
+      "email": "einsarr@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "sarr",
+      "name": "Moussa SARR",
+      "password": "P@sser2023",
+      "email": "einsarrdds@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": false
+    },
+    {
+      "id": "sy",
+      "name": "Fallou Sy",
+      "password": "P@sser2023",
+      "email": "einsareedsr@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": false
+    },
+    {
+      "id": "kane",
+      "name": "Ibrahima KANE",
+      "password": "P@sser2023",
+      "email": "einsarssrffddr@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    }
+  ],
+  "lits": [
+    {
+      "id": 1,
+      "nom_lit": "Mark",
+      "type_lit": "lit de soins intensifs",
+      "salle": "Salle 1",
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": true
+    },
+    {
+      "id": 2,
+      "nom_lit": "Mardfhfhk",
+      "type_lit": "lit pédiatrique",
+      "salle": "Salle 2",
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": false
+    },
+    {
+      "id": 3,
+      "nom_lit": "Mardfhfhk",
+      "type_lit": "lit plat en dortoir",
+      "salle": "Salle 3",
+      "disponibilte": true,
+      "monitoring": true,
+      "oxygene": true
+    },
+    {
+      "id": 4,
+      "nom_lit": "Mardfhfhk",
+      "type_lit": "lit motorisé",
+      "salle": "Salle 4",
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": false
+    },
+    {
+      "id": 5,
+      "nom_lit": "sarr",
+      "type_lit": "lit plat en dortoir",
+      "salle": "salle 25",
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": false
+    }
+  ],
+  "salles": [
+    {
+      "id": "1",
+      "nom_salle": "Mark",
+      "Service": "Hospitalisation en pédiatrie",
+      "type_salle": "Hospitalisation en pédiatrie",
+      "disponibilité": false
+    },
+    {
+      "id": "2",
+      "nom_salle": "Mardfhfhk",
+      "Service": "Hospitalisation de jour",
+      "type_salle": "Hospitalisation en pédiatrie",
+      "disponibilité": true
+    },
+    {
+      "id": "3",
+      "nom_salle": "Mark ghg",
+      "Service": "Hospitalisation en soins intensifs",
+      "type_salle": "Hospitalisation en pédiatrie",
+      "disponibilité": false
+    },
+    {
+      "id": "4",
+      "nom_salle": "Marknn njiy",
+      "Service": "Marknn njiy",
+      "type_salle": "Hospitalisation en traumatologie",
+      "disponibilité": true
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "nom_service": "médecine générale",
+      "disponibilité": false
+    },
+    {
+      "id": "2",
+      "nom_service": "chirurgie",
+      "disponibilité": true
+    },
+    {
+      "id": "3",
+      "nom_service": "pneumologie",
+      "disponibilité": false
+    },
+    {
+      "id": "4",
+      "nom_service": "cardiologie",
+      "disponibilité": true
+    }
+  ]
 }

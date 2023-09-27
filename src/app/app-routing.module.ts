@@ -29,7 +29,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'lits',component:LitsComponent},
   {path:'newlit',component:NewLitComponent},
-  {path:'editlit',component:EditLitComponent},
+  {path:'editlit/:id',component:EditLitComponent},
   {path:'services',component:ServicesComponent},
   {path:'editservice',component:EditServiceComponent},
   {path:'salles',component:SallesComponent},

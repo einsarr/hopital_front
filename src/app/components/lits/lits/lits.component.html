@@ -19,56 +19,17 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>lit de soins intensifs</td>
-          <td>lit de soins intensifs</td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td><i class="fa fa-check text-success"></i></td>
+        <tr *ngFor="let lit of lits$ | async">
+          <th scope="row">{{lit.id}}</th>
+          <td>{{lit.nom_lit}}</td>
+          <td>{{lit.type_lit}}</td>
+          <td>{{lit.salle}}</td>
+          <td><i [class]="lit.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+          <td><i [class]="lit.monitoring?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+          <td><i [class]="lit.oxygene?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
           <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editlit"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Mardfhfhk</td>
-          <td>lit pédiatrique</td>
-          <td>lit pédiatrique</td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editlit"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Mark ghg</td>
-          <td>lit plat en dortoir</td>
-          <td>lit plat en dortoir</td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editlit"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Marknn njiy</td>
-          <td>Marknn njiy</td>
-          <td>lit motorisé</td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editlit"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
+            <button (click)="EditLit(lit)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+            <button class="btn btn-danger btn-xs" (click)="DeleteLit(lit)"><i class="fa fa-trash"></i></button>
           </td>
         </tr>
         </tbody>

@@ -3,14 +3,16 @@
     <div class="panel panel-info">
       <div class="panel-heading"><h3>Nouveau lit</h3></div>
       <div class="panel-body">
-        <form>
+        <form [formGroup]="formNewLit" (ngSubmit)="saveLit()">
+        
           <div class="form-group">
             <label for="nom">Nom du lit:</label>
-            <input type="text" class="form-control" id="nom">
+            <input type="text" class="form-control" id="nom_lit" formControlName="nom_lit">
           </div>
+         
           <div class="form-group">
             <label>Type de lit:</label>
-            <select class="form-control">
+            <select class="form-control" class="form-control" id="type_lit" formControlName="type_lit">
               <option>--Choisir le type de lit--</option>
               <option>lit de soins intensifs</option>
               <option>lit pédiatrique</option>
@@ -18,12 +20,27 @@
               <option>lit motorisé</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label for="etat">Disponibilité </label>
-            <input type="checkbox" id="etat">
+            <label for="salle">Salle:</label>
+            <input type="text" class="form-control" id="salle" formControlName="salle">
+          </div>
+
+          <div class="form-group">
+            <label for="disponibilite">Disponibilité</label>
+            <input type="checkbox"  class="form-check-input" formControlName="disponibilite"  id="disponibilite" name="disponibilite">
           </div>
           <div class="form-group">
-            <input type="submit" name="submit" class="btn btn-primary btn-xs" routerLink="/lits" value="Ajouter">
+            <label for="monitoring">Montoring</label>
+            <input type="checkbox"  class="form-check-input" formControlName="monitoring"  id="monitoring" name="monitoring">
+          </div>
+          <div class="form-group">
+            <label for="oxygene">Oxygene</label>
+            <input type="checkbox"  class="form-check-input" formControlName="oxygene"  id="oxygene" name="oxygene">
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" [disabled]="!formNewLit.valid" class="btn btn-primary btn-xs">Ajouter</button>
           </div>
         </form>
       </div>
