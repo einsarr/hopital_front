@@ -21,10 +21,10 @@ import { ForgetpwdComponent } from './components/forgetpwd/forgetpwd.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { UsersComponent } from './components/users/users/users.component';
 import { NewUserComponent } from './components/users/new-user/new-user.component';
-import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 import { LitsComponent } from './components/lits/lits/lits.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { ToastrModule } from 'ngx-toastr';
     ContactsComponent,
     UsersComponent,
     NewUserComponent,
-    EditUserComponent
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

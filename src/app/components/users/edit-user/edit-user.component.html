@@ -1,42 +1,51 @@
 <div class="container">
-  <div class="col-md-4">
-    <div class="panel panel-info">
-      <div class="panel-heading"><h3>Modification d'un utlisateur</h3></div>
-      <div class="panel-body">
-        <form>
-          <div class="form-group">
-            <label for="prenom">Prénom du user:</label>
-            <input type="text" class="form-control" id="prenom" value="Cheikh modou">
-          </div>
-          <div class="form-group">
-            <label for="nom">Nom du user:</label>
-            <input type="text" class="form-control" id="nom" value="Wade">
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" class="form-control" id="email" value="checikh@gmail.com">
-          </div>
-          <div class="form-group">
-            <label for="telephone">Téléphone:</label>
-            <input type="text" class="form-control" id="telephone" value="774521452">
-          </div>
-          <div class="form-group">
-            <label>Type de profil:</label>
-            <select class="form-control">
-              <option>Admin</option>
-              <option>User</option>
-              <option>Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="etat">Etat </label>
-            <input type="checkbox" id="etat" checked>
-          </div>
-          <div class="form-group">
-            <input type="submit" name="submit" class="btn btn-warning btn-xs" routerLink="/users" value="Modifier">
-          </div>
-        </form>
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3>Modification d'un utlisateur</h3></div>
+        <div class="panel-body">
+          <form *ngIf="userFormGroup" [formGroup]="userFormGroup" (ngSubmit)="updateUser()">
+            <div class="form-group">
+              <label for="prenom">Prénom du user:</label>
+              <input type="text" class="form-control" id="prenom" formControlName="prenom">
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom du user:</label>
+              <input type="text" class="form-control" id="nom" formControlName="nom">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone:</label>
+              <input type="text" class="form-control" id="telephone" formControlName="telephone">
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Mot de passe:</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+              </div>
+
+            <div class="form-group">
+              <label>Le role:</label>
+              <select class="form-control" formControlName="role" id="role">
+                <option>admin</option>
+                <option>User</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="isActive">Etat </label>
+                <input type="checkbox" id="isActive" formControlName="isActive">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" [disabled]="!userFormGroup.valid" class="btn btn-warning btn-xs">Modifier</button>
+              </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  

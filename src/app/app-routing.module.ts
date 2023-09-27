@@ -17,9 +17,9 @@ import { EditSalleComponent } from './components/salles/edit-salle/edit-salle.co
 import { SallesComponent } from './components/salles/salles/salles.component';
 import { LitsComponent } from './components/lits/lits/lits.component';
 import { UsersComponent } from './components/users/users/users.component';
-import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 import { NewUserComponent } from './components/users/new-user/new-user.component';
 import { NewServiceComponent } from './components/services/new-service/new-service.component';
+import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},

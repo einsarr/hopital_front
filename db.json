@@ -2,37 +2,41 @@
   "users": [
     {
       "id": 1,
-      "name": "Moussa SARR",
-      "password": "P@sser2023",
+      "prenom": "Moussa",
+      "nom": "SARR",
+      "telephone": "00221776171703",
       "email": "einsarr@gmail.com",
-      "gender": "male",
-      "role": "admin",
-      "isActive": true
-    },
-    {
-      "id": 2,
-      "name": "Moussa SARR",
       "password": "P@sser2023",
-      "email": "einsarrdds@gmail.com",
-      "gender": "male",
       "role": "admin",
       "isActive": false
     },
     {
+      "id": 2,
+      "prenom": "Mouhamed",
+      "nom": "SARRe",
+      "telephone": "221776171703",
+      "email": "einsarrmohas@gmail.com",
+      "password": "P@sser2023hfhf",
+      "role": "User",
+      "isActive": true
+    },
+    {
       "id": 3,
-      "name": "Fallou Sy",
+      "prenom": "Moussa",
+      "nom": "SARR",
       "password": "P@sser2023",
       "email": "einsareedsr@gmail.com",
-      "gender": "male",
+      "telephone": "00221776171703",
       "role": "admin",
       "isActive": false
     },
     {
       "id": 4,
-      "name": "Ibrahima KANE",
+      "prenom": "Moussa",
+      "nom": "SARR",
       "password": "P@sser2023",
       "email": "einsarssrffddr@gmail.com",
-      "gender": "male",
+      "telephone": "00221776171703",
       "role": "admin",
       "isActive": true
     }

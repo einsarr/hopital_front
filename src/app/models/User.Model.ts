@@ -4,6 +4,8 @@ export interface User{
     prenom: string
     nom: string
     email: string
+    password: string
     telephone: string
-    disponibilite: boolean
+    role: string
+    isActive: string
 }
