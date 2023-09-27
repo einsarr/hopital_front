@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,33 +11,40 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
 
-  public loginForm !: FormGroup
+  userdata:any;
 
-  constructor(private formBuilder : FormBuilder, private http : HttpClient,private router:Router){}
-
-  ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      email:this.formBuilder.control('',Validators.required),
-      password:this.formBuilder.control('',Validators.required),
-    });
+  constructor(private formBuilder : FormBuilder,private authService:AuthService, private http : HttpClient,private router:Router){
+    sessionStorage.clear();
   }
 
+  ngOnInit(): void {
+    
+  }
+
+  loginForm = this.formBuilder.group({
+    id:this.formBuilder.control('',Validators.required),
+    password:this.formBuilder.control('',Validators.required),
+  });
+
+
   login(){
-    this.http.get<any>("http://localhost:3000/users")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
-      });
-      if(user){
-        alert("Login success !");
-        this.loginForm.reset();
-        this.router.navigate(['dashboard'])
-      }else{
-        alert("User not found !")
+      if(this.loginForm.valid){
+        this.authService.getById(this.loginForm.value.id).subscribe(res=>{
+          this.userdata = res;
+          console.log(this.userdata);
+          if(this.userdata.password === this.loginForm.value.password){
+            if(this.userdata.isActive){
+              sessionStorage.setItem('email',this.userdata.id);
+              sessionStorage.setItem('userrole',this.userdata.role);
+              this.router.navigate(['dashboard']);
+            }else{
+              alert("User disabled");
+            }
+          }else{
+            alert("Invalid credentials");
+          }
+        })
       }
-    },err=>{
-      alert("Something went wrong")
-    })
   }
 
 }

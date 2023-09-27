@@ -1,27 +1,27 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "einsarr@gmail.com",
       "prenom": "Moussa",
       "nom": "SARR",
       "telephone": "00221776171703",
       "email": "einsarr@gmail.com",
       "password": "P@sser2023",
       "role": "admin",
-      "isActive": false
+      "isActive": true
     },
     {
-      "id": 2,
+      "id": "insarr@gmail.com",
       "prenom": "Mouhamed",
       "nom": "SARRe",
       "telephone": "221776171703",
       "email": "einsarrmohas@gmail.com",
       "password": "P@sser2023hfhf",
       "role": "User",
-      "isActive": true
+      "isActive": false
     },
     {
-      "id": 3,
+      "id": "einsssarr@gmail.com",
       "prenom": "Moussa",
       "nom": "SARR",
       "password": "P@sser2023",
@@ -31,12 +31,22 @@
       "isActive": false
     },
     {
-      "id": 4,
+      "id": "einsasszeerr@gmail.com",
       "prenom": "Moussa",
       "nom": "SARR",
       "password": "P@sser2023",
       "email": "einsarssrffddr@gmail.com",
       "telephone": "00221776171703",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "einsarr@sqqgmail.com",
+      "prenom": "Amadou",
+      "nom": "DIA",
+      "telephone": "771008706",
+      "email": "andiosambou2005@yahoo.fr",
+      "password": "sdefff",
       "role": "admin",
       "isActive": true
     }
@@ -123,25 +133,25 @@
       "id": 1,
       "nom_service": "médecine générale",
       "structure": "OGY",
-      "disponibilite": null
+      "disponibilite": true
     },
     {
       "id": 2,
       "nom_service": "chirurgie",
-      "structure": "OGY",
-      "disponibilite": true
+      "structure": "Clinique 17",
+      "disponibilite": false
     },
     {
       "id": 3,
       "nom_service": "pneumologie",
       "structure": "FANN",
-      "disponibilite": null
+      "disponibilite": false
     },
     {
       "id": 4,
       "nom_service": "cardiologie",
       "structure": "Abasse Ndao",
-      "disponibilite": null
+      "disponibilite": true
     }
   ]
 }
