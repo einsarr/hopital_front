@@ -19,6 +19,7 @@ import { LitsComponent } from './components/lits/lits/lits.component';
 import { UsersComponent } from './components/users/users/users.component';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 import { NewUserComponent } from './components/users/new-user/new-user.component';
+import { NewServiceComponent } from './components/services/new-service/new-service.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:'newlit',component:NewLitComponent},
   {path:'editlit/:id',component:EditLitComponent},
   {path:'services',component:ServicesComponent},
+  {path:'newservice',component:NewServiceComponent},
   {path:'editservice/:id',component:EditServiceComponent},
   {path:'salles',component:SallesComponent},
   {path:'newsalle',component:NewSalleComponent},

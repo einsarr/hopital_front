@@ -97,14 +97,14 @@
       "nom_salle": "Mardfhfhk",
       "service": "Hospitalisation de jour",
       "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilite": true
+      "disponibilite": false
     },
     {
       "id": 3,
       "nom_salle": "Mark ghg",
       "service": "Hospitalisation en soins intensifs",
       "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilite": null
+      "disponibilite": true
     },
     {
       "id": 4,
@@ -118,22 +118,26 @@
     {
       "id": 1,
       "nom_service": "médecine générale",
-      "disponibilité": false
+      "structure": "OGY",
+      "disponibilite": null
     },
     {
       "id": 2,
       "nom_service": "chirurgie",
-      "disponibilité": true
+      "structure": "OGY",
+      "disponibilite": true
     },
     {
       "id": 3,
       "nom_service": "pneumologie",
-      "disponibilité": false
+      "structure": "FANN",
+      "disponibilite": null
     },
     {
       "id": 4,
       "nom_service": "cardiologie",
-      "disponibilité": true
+      "structure": "Abasse Ndao",
+      "disponibilite": null
     }
   ]
 }
