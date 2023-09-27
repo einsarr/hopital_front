@@ -3,14 +3,20 @@
     <div class="panel panel-info">
       <div class="panel-heading"><h3>Modification d'une salle</h3></div>
       <div class="panel-body">
-        <form>
+        <form *ngIf="salleFormGroup" [formGroup]="salleFormGroup" (ngSubmit)="updateSalle()">
           <div class="form-group">
-            <label for="nom">Nom de la salle:</label>
-            <input type="text" class="form-control" id="nom" value="Salle dr.sy">
+            <label for="nom_salle">Nom de la salle:</label>
+            <input type="text" class="form-control" id="nom_salle" formControlName="nom_salle">
           </div>
+
+          <div class="form-group">
+            <label for="service">Service:</label>
+            <input type="text" class="form-control" id="service" formControlName="service">
+          </div>
+
           <div class="form-group">
             <label>Type de salle:</label>
-            <select class="form-control">
+            <select class="form-control" id="type_salle" formControlName="type_salle">
               <option>Hospitalisation complète</option>
               <option>Hospitalisation à temps partiel</option>
               <option>Hospitalisation de jour</option>
@@ -19,12 +25,19 @@
               <option>Hospitalisation en pédiatrie</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label for="etat">Disponibilité </label>
-            <input type="checkbox" id="etat">
+            <label for="service">Service:</label>
+            <input type="text" class="form-control" id="service" formControlName="service">
           </div>
+
           <div class="form-group">
-            <input type="submit" name="submit" class="btn btn-warning btn-xs" routerLink="/salles" value="Modifier">
+            <label for="disponibilite">Disponibilité</label>
+            <input type="checkbox"  class="form-check-input" formControlName="disponibilite"  id="disponibilite" name="disponibilite">
+          </div>
+
+          <div class="form-group">
+            <button type="submit" [disabled]="!salleFormGroup.valid" class="btn btn-warning btn-xs">Modifier</button>
           </div>
         </form>
       </div>

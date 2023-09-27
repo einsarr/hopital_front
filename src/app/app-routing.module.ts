@@ -31,16 +31,16 @@ const routes: Routes = [
   {path:'newlit',component:NewLitComponent},
   {path:'editlit/:id',component:EditLitComponent},
   {path:'services',component:ServicesComponent},
-  {path:'editservice',component:EditServiceComponent},
+  {path:'editservice/:id',component:EditServiceComponent},
   {path:'salles',component:SallesComponent},
   {path:'newsalle',component:NewSalleComponent},
-  {path:'editsalle',component:EditSalleComponent},
+  {path:'editsalle/:id',component:EditSalleComponent},
   {path:'welcome',component:WelcomeComponent},
   {path:'forgetpwd',component:ForgetpwdComponent},
   {path:'contacts',component:ContactsComponent},
   {path:'users',component:UsersComponent},
   {path:'newuser',component:NewUserComponent},
-  {path:'edituser',component:EditUserComponent},
+  {path:'edituser/:id',component:EditUserComponent},
 ];
 
 @NgModule({

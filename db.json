@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": "moussa",
+      "id": 1,
       "name": "Moussa SARR",
       "password": "P@sser2023",
       "email": "einsarr@gmail.com",
@@ -10,7 +10,7 @@
       "isActive": true
     },
     {
-      "id": "sarr",
+      "id": 2,
       "name": "Moussa SARR",
       "password": "P@sser2023",
       "email": "einsarrdds@gmail.com",
@@ -19,7 +19,7 @@
       "isActive": false
     },
     {
-      "id": "sy",
+      "id": 3,
       "name": "Fallou Sy",
       "password": "P@sser2023",
       "email": "einsareedsr@gmail.com",
@@ -28,7 +28,7 @@
       "isActive": false
     },
     {
-      "id": "kane",
+      "id": 4,
       "name": "Ibrahima KANE",
       "password": "P@sser2023",
       "email": "einsarssrffddr@gmail.com",
@@ -86,52 +86,52 @@
   ],
   "salles": [
     {
-      "id": "1",
+      "id": 1,
       "nom_salle": "Mark",
-      "Service": "Hospitalisation en pédiatrie",
+      "service": "Hospitalisation en pédiatrie",
       "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilité": false
+      "disponibilite": true
     },
     {
-      "id": "2",
+      "id": 2,
       "nom_salle": "Mardfhfhk",
-      "Service": "Hospitalisation de jour",
+      "service": "Hospitalisation de jour",
       "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilité": true
+      "disponibilite": true
     },
     {
-      "id": "3",
+      "id": 3,
       "nom_salle": "Mark ghg",
-      "Service": "Hospitalisation en soins intensifs",
+      "service": "Hospitalisation en soins intensifs",
       "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilité": false
+      "disponibilite": null
     },
     {
-      "id": "4",
+      "id": 4,
       "nom_salle": "Marknn njiy",
-      "Service": "Marknn njiy",
-      "type_salle": "Hospitalisation en traumatologie",
-      "disponibilité": true
+      "service": "Marknn njiy",
+      "type_salle": "Hospitalisation complète",
+      "disponibilite": true
     }
   ],
   "services": [
     {
-      "id": "1",
+      "id": 1,
       "nom_service": "médecine générale",
       "disponibilité": false
     },
     {
-      "id": "2",
+      "id": 2,
       "nom_service": "chirurgie",
       "disponibilité": true
     },
     {
-      "id": "3",
+      "id": 3,
       "nom_service": "pneumologie",
       "disponibilité": false
     },
     {
-      "id": "4",
+      "id": 4,
       "nom_service": "cardiologie",
       "disponibilité": true
     }

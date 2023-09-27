@@ -17,50 +17,17 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Hospitalisation en pédiatrie</td>
-          <td>Hospitalisation en pédiatrie</td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editsalle"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Mardfhfhk</td>
-          <td>Hospitalisation de jour</td>
-          <td>Hospitalisation de jour</td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editsalle"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Mark ghg</td>
-          <td>Mark ghg</td>
-          <td>Hospitalisation en soins intensifs</td>
-          <td><i class="fa fa-check text-success"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editsalle"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Marknn njiy</td>
-          <td>Marknn njiy</td>
-          <td>Hospitalisation en traumatologie</td>
-          <td><i class="fa fa-close text-danger"></i></td>
-          <td>
-            <button class="btn btn-warning btn-xs" routerLink="/editsalle"><i class="fa fa-pencil"></i></button> |
-            <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
-          </td>
-        </tr>
+          <tr *ngFor="let salle of salles$ | async">
+            <th scope="row">{{salle.id}}</th>
+            <td>{{salle.nom_salle}}</td>
+            <td>{{salle.service}}</td>
+            <td>{{salle.type_salle}}</td>
+            <td><i [class]="salle.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+            <td>
+              <button (click)="EditSalle(salle)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+              <button class="btn btn-danger btn-xs" (click)="DeleteSalle(salle)"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
