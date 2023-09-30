@@ -31,4 +31,9 @@ export class LitService {
       updateLit(lit:Lit){
         return this.http.put<Lit>(this.baseUrl+"/lits/"+lit.id,lit);
       }
+
+      public disponibiliteLit(lit:Lit):Observable<Lit>{
+        return this.http.patch<Lit>(this.baseUrl+"/lits/"+lit.id,{disponibilite:!lit.disponibilite});
+      }
+      
 }

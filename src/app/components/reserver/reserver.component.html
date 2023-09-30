@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3>Réservation d'un lit</h3></div>
+        <div class="panel-body">
+          <form *ngIf="reservationFormGroup" [formGroup]="reservationFormGroup" (ngSubmit)="ReserverLit()">
+            
+            <div class="form-group">
+              <label for="nom_lit">Nom du lit:</label>
+              <input type="text" class="form-control" formControlName="nom_lit" id="nom_lit" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="type_lit">Type de lit:</label>
+              <input type="text" class="form-control" formControlName="type_lit" id="type_lit" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="salle">Salle:</label>
+              <input type="text" class="form-control" formControlName="salle" id="salle" readonly>
+            </div>
+
+            <div class="form-group">
+              <label for="sel1">Type de lit:</label>
+              <select class="form-control" id="sel1" aria-readonly="true">
+                <option>lit de soins intensifs</option>
+                <option>lit pédiatrique</option>
+                <option>lit plat en dortoir</option>
+                <option>lit motorisé</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="disponibilite">Disponibilité </label>
+              <input type="checkbox" id="disponibilite" formControlName="disponibilite" onclick="return false;">
+            </div>
+
+            <div class="form-group">
+              <label for="monitoring">Monitoring </label>
+              <input type="checkbox" id="monitoring" formControlName="monitoring" onclick="return false;">
+            </div>
+
+            <div class="form-group">
+              <label for="oxygene">Oxygène</label>
+              <input type="checkbox" id="oxygene" formControlName="oxygene" onclick="return false;">
+            </div>
+
+            <div class="form-group">
+                <label for="salle">Date début:</label>
+                <input type="datetime-local" class="form-control" formControlName="date_debut" id="date_debut">
+            </div>
+
+            <div class="form-group">
+              <label for="salle">Date de fin:</label>
+              <input type="datetime-local" class="form-control" formControlName="date_fin" id="date_fin">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" [disabled]="!reservationFormGroup.valid" class="btn btn-success btn-xs">Réserver</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

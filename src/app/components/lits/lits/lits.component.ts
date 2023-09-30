@@ -35,4 +35,13 @@ export class LitsComponent implements OnInit{
   EditLit(lit:Lit){
     this.router.navigateByUrl('/editlit/'+lit.id);
   }
+
+  ReserveLit(lit:Lit){
+    if(lit.disponibilite===true){
+      this.router.navigateByUrl('/reserver/'+lit.id);
+    }else{
+      alert("Lit non disponible")
+    }
+    
+  }
 }

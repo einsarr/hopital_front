@@ -21,6 +21,9 @@ import { NewUserComponent } from './components/users/new-user/new-user.component
 import { NewServiceComponent } from './components/services/new-service/new-service.component';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ReserverComponent } from './components/reserver/reserver.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
+import { EditReservationComponent } from './components/edit-reservation/edit-reservation.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -44,6 +47,9 @@ const routes: Routes = [
   {path:'users',component:UsersComponent, canActivate:[AuthGuard]},
   {path:'newuser',component:NewUserComponent, canActivate:[AuthGuard]},
   {path:'edituser/:id',component:EditUserComponent, canActivate:[AuthGuard]},
+  {path:'reserver/:id',component:ReserverComponent, canActivate:[AuthGuard]},
+  {path:'reservations',component:ReservationsComponent, canActivate:[AuthGuard]},
+  {path:'editreservation/:id',component:EditReservationComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({

@@ -25,6 +25,9 @@ import { LitsComponent } from './components/lits/lits/lits.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { EditUserComponent } from './components/users/edit-user/edit-user.component';
+import { ReserverComponent } from './components/reserver/reserver.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
+import { EditReservationComponent } from './components/edit-reservation/edit-reservation.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
     UsersComponent,
     NewUserComponent,
     EditUserComponent,
+    ReserverComponent,
+    ReservationsComponent,
+    EditReservationComponent,
   ],
   imports: [
     BrowserModule,

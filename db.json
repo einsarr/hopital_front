@@ -57,16 +57,16 @@
       "nom_lit": "Mark",
       "type_lit": "lit de soins intensifs",
       "salle": "Salle 1",
-      "disponibilite": true,
+      "disponibilite": false,
       "monitoring": false,
-      "oxygene": true
+      "oxygene": false
     },
     {
       "id": 2,
       "nom_lit": "Mardfhfhk",
       "type_lit": "lit pédiatrique",
       "salle": "Salle 2",
-      "disponibilite": true,
+      "disponibilite": false,
       "monitoring": true,
       "oxygene": false
     },
@@ -75,7 +75,7 @@
       "nom_lit": "Mardfhfhk",
       "type_lit": "lit plat en dortoir",
       "salle": "Salle 3",
-      "disponibilte": true,
+      "disponibilite": false,
       "monitoring": true,
       "oxygene": true
     },
@@ -152,6 +152,30 @@
       "nom_service": "cardiologie",
       "structure": "Abasse Ndao",
       "disponibilite": true
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "nom_lit": "Mark",
+      "type_lit": "lit de soins intensifs",
+      "salle": "Salle 1",
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": false,
+      "date_debut": "2023-09-30T15:53",
+      "date_fin": "2023-09-30T23:58"
+    },
+    {
+      "id": 2,
+      "nom_lit": "Mardfhfhk",
+      "type_lit": "lit pédiatrique",
+      "salle": "Salle 2",
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": false,
+      "date_debut": "2023-09-30T23:58",
+      "date_fin": "2023-09-30T16:53"
     }
   ]
 }
