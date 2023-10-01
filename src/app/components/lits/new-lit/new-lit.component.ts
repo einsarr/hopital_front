@@ -27,7 +27,7 @@ export class NewLitComponent {
       nom_lit : ['',Validators.required],
       type_lit : ['',Validators.required],
       salle : ['',Validators.required],
-      disponibilite : [false,Validators.required],
+      disponibilite : [true,Validators.required],
       monitoring : [false,Validators.required],
       oxygene : [false,Validators.required],
     });

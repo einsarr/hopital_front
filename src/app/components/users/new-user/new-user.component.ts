@@ -30,7 +30,7 @@ export class NewUserComponent {
       telephone : ['',Validators.required],
       password : ['',Validators.required],
       role : ['',Validators.required],
-      isActive : [false,Validators.required],
+      isActive : [true,Validators.required],
     });
   }
 

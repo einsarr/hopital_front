@@ -26,7 +26,7 @@ export class NewServiceComponent {
     this.formNewService = this.fb.group({
       nom_service : ['',Validators.required],
       structure : ['',Validators.required],
-      disponibilite : [false,Validators.required],
+      disponibilite : [true,Validators.required],
     });
   }
 

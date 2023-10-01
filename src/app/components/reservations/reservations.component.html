@@ -17,6 +17,7 @@
           <tr>
             <th scope="col">N°</th>
             <th scope="col">Nom lit</th>
+            <th scope="col">Date</th>
             <th scope="col">Date de début</th>
             <th scope="col">Date de fin</th>
             <th scope="col">Monitoring</th>
@@ -28,6 +29,7 @@
           <tr *ngFor="let lit of lits$ | async">
             <th scope="row">{{lit.id}}</th>
             <td>{{lit.nom_lit}}</td>
+            <td>{{lit.date_reservation}}</td>
             <td>{{lit.date_debut}}</td>
             <td>{{lit.date_debut}}</td>
             <td><i [class]="lit.monitoring?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>

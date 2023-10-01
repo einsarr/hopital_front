@@ -32,7 +32,8 @@ export class ReserverComponent implements OnInit{
           monitoring : this.fb.control(lit.monitoring),
           oxygene : this.fb.control(lit.oxygene),
           date_debut : ['',Validators.required],
-          date_fin : ['',Validators.required]
+          date_fin : ['',Validators.required],
+          date_reservation : [new Date(),Validators.required],
         });
       },error : error=>{
         console.log(error);

@@ -27,7 +27,7 @@ export class NewSalleComponent {
       nom_salle : ['',Validators.required],
       service : ['',Validators.required],
       type_salle : ['',Validators.required],
-      disponibilite : [false,Validators.required],
+      disponibilite : [true,Validators.required],
     });
   }
 

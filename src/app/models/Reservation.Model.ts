@@ -9,4 +9,5 @@ export interface Reservation{
     oxygene: boolean
     date_debut: Date
     date_fin: Date
+    date_reservation:Date
 }

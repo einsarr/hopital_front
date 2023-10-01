@@ -57,7 +57,7 @@
       "nom_lit": "Mark",
       "type_lit": "lit de soins intensifs",
       "salle": "Salle 1",
-      "disponibilite": false,
+      "disponibilite": true,
       "monitoring": false,
       "oxygene": false
     },
@@ -84,7 +84,7 @@
       "nom_lit": "Mardfhfhk",
       "type_lit": "lit motorisé",
       "salle": "Salle 4",
-      "disponibilite": true,
+      "disponibilite": false,
       "monitoring": true,
       "oxygene": false
     },
@@ -93,9 +93,18 @@
       "nom_lit": "sarr",
       "type_lit": "lit plat en dortoir",
       "salle": "salle 25",
-      "disponibilite": true,
+      "disponibilite": false,
       "monitoring": true,
       "oxygene": false
+    },
+    {
+      "nom_lit": "xsd",
+      "type_lit": "lit de soins intensifs",
+      "salle": "salle 25",
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": false,
+      "id": 6
     }
   ],
   "salles": [
@@ -163,19 +172,33 @@
       "disponibilite": true,
       "monitoring": false,
       "oxygene": false,
-      "date_debut": "2023-09-30T15:53",
-      "date_fin": "2023-09-30T23:58"
+      "date_debut": "2023-10-01T14:07",
+      "date_fin": "2023-10-01T14:06",
+      "date_reservation": "2023-10-01T14:06"
     },
     {
-      "id": 2,
+      "id": 3,
       "nom_lit": "Mardfhfhk",
-      "type_lit": "lit pédiatrique",
-      "salle": "Salle 2",
+      "type_lit": "lit plat en dortoir",
+      "salle": "Salle 3",
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": true,
+      "date_debut": "2023-10-01T19:02",
+      "date_fin": "2023-10-01T14:08",
+      "date_reservation": "2023-10-01T14:06"
+    },
+    {
+      "id": 4,
+      "nom_lit": "Mardfhfhk",
+      "type_lit": "lit motorisé",
+      "salle": "Salle 4",
       "disponibilite": true,
       "monitoring": true,
       "oxygene": false,
-      "date_debut": "2023-09-30T23:58",
-      "date_fin": "2023-09-30T16:53"
+      "date_debut": "2023-10-01T14:07",
+      "date_fin": "2023-10-01T19:03",
+      "date_reservation": "2023-10-01T14:06"
     }
   ]
 }
