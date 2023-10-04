@@ -30,7 +30,7 @@ export class ReserverService {
     }
 
     updateReservation(reserver:Reservation){
-      return this.http.put<Reservation>(this.baseUrl+"/reservations/"+reserver.id,reserver);
+      return this.http.patch<Reservation>(this.baseUrl+"/reservations/"+reserver.id,reserver);
     }
 
 }

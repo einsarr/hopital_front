@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Lit } from 'src/app/models/Lit.Model';
+import { Salle } from 'src/app/models/Salle.Model';
 import { LitService } from 'src/app/services/lit.service';
+import { SalleService } from 'src/app/services/salle.service';
 
 @Component({
   selector: 'app-new-lit',
@@ -14,12 +17,13 @@ export class NewLitComponent {
 
   formNewLit!:FormGroup;
 
-  constructor(private fb: FormBuilder,private litService:LitService,private router:Router){
+  salles$! :Observable<Array<Salle>>;
+  constructor(private fb: FormBuilder,private litService:LitService,private salleService:SalleService,private router:Router){
     this.form();
   }
 
   ngOnInit(){
-    
+    this.getSalles();
   }
 
   form(){
@@ -44,4 +48,17 @@ export class NewLitComponent {
       }
     });
   }
+
+ /* getSalles(){
+    this.salleService.getSalles().subscribe(data=>{
+      this.salles.push(...data);
+    }, error => {
+        console.log(error)
+    })
+  }
+*/
+    getSalles(){
+      this.salles$=this.salleService.getSalles();
+    }
+
 }

@@ -12,7 +12,7 @@
          
           <div class="form-group">
             <label>Type de lit:</label>
-            <select class="form-control" class="form-control" id="type_lit" formControlName="type_lit">
+            <select class="form-control" class="form-select" id="type_lit" formControlName="type_lit">
               <option>--Choisir le type de lit--</option>
               <option>lit de soins intensifs</option>
               <option>lit pédiatrique</option>
@@ -22,18 +22,23 @@
           </div>
 
           <div class="form-group">
-            <label for="salle">Salle:</label>
-            <input type="text" class="form-control" id="salle" formControlName="salle">
-          </div>
+            <label for="salle">Salle</label>
+            <select id="salle" formControlName="salle" class="form-select">
+                <option selected="selected">--Choisir le type de lit--</option>
+                <option *ngFor="let s of salles$ |async" [ngValue]="s">{{s.nom_salle}}</option>
+            </select>
+          </div>  
 
           <div class="form-group">
             <label for="disponibilite">Disponibilité</label>
             <input type="checkbox" class="form-check-input" checked="checked" formControlName="disponibilite"  id="disponibilite">
           </div>
+
           <div class="form-group">
             <label for="monitoring">Montoring</label>
             <input type="checkbox"  class="form-check-input" formControlName="monitoring"  id="monitoring" name="monitoring">
           </div>
+
           <div class="form-group">
             <label for="oxygene">Oxygene</label>
             <input type="checkbox"  class="form-check-input" formControlName="oxygene"  id="oxygene" name="oxygene">

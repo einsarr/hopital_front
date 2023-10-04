@@ -30,7 +30,8 @@ export class EditReservationComponent implements OnInit{
           monitoring : this.fb.control(reservation.monitoring),
           oxygene : this.fb.control(reservation.oxygene),
           date_debut : this.fb.control(reservation.date_debut),
-          date_fin : this.fb.control(reservation.date_fin)
+          date_fin : this.fb.control(reservation.date_fin),
+          updated_reservation : new Date()
         });
       },error : error=>{
         console.log(error);

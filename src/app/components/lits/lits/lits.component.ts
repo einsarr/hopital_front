@@ -23,17 +23,28 @@ export class LitsComponent implements OnInit{
 
 
   DeleteLit(lit:Lit){
-    if(confirm("Do you sure to delete ?"))
+    if(lit.disponibilite===true){
+      if(confirm("Do you sure to delete ?"))
       this.litService.deleteLit(lit).subscribe({
         next:value =>{
           this.getLits();
           //this.products$.pipe(filter(p=>p.id==product.id))
         }
       });
+    }else{
+      alert("Impossible de supprimer un lit déjà occupé")
+    }
+    
   }
 
   EditLit(lit:Lit){
-    this.router.navigateByUrl('/editlit/'+lit.id);
+
+    if(lit.disponibilite===true){
+      this.router.navigateByUrl('/editlit/'+lit.id);
+    }else{
+      alert("Impossible de modifier un lit déjà occupé")
+    }
+    
   }
 
   ReserveLit(lit:Lit){

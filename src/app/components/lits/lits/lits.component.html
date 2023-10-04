@@ -32,7 +32,7 @@
           <th scope="row">{{lit.id}}</th>
           <td>{{lit.nom_lit}}</td>
           <td>{{lit.type_lit}}</td>
-          <td>{{lit.salle}}</td>
+          <td>{{lit.salle.nom_salle}}</td>
           <td><i [class]="lit.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
           <td><i [class]="lit.monitoring?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
           <td><i [class]="lit.oxygene?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>

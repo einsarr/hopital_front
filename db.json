@@ -54,57 +54,63 @@
   "lits": [
     {
       "id": 1,
-      "nom_lit": "Mark",
+      "nom_lit": "Lit n1",
       "type_lit": "lit de soins intensifs",
-      "salle": "Salle 1",
+      "salle": {
+        "id": 1,
+        "nom_salle": "Mark",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
       "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false
-    },
-    {
-      "id": 2,
-      "nom_lit": "Mardfhfhk",
-      "type_lit": "lit pédiatrique",
-      "salle": "Salle 2",
-      "disponibilite": false,
-      "monitoring": true,
-      "oxygene": false
-    },
-    {
-      "id": 3,
-      "nom_lit": "Mardfhfhk",
-      "type_lit": "lit plat en dortoir",
-      "salle": "Salle 3",
-      "disponibilite": false,
       "monitoring": true,
       "oxygene": true
     },
     {
-      "id": 4,
-      "nom_lit": "Mardfhfhk",
-      "type_lit": "lit motorisé",
-      "salle": "Salle 4",
-      "disponibilite": false,
-      "monitoring": true,
-      "oxygene": false
-    },
-    {
-      "id": 5,
-      "nom_lit": "sarr",
-      "type_lit": "lit plat en dortoir",
-      "salle": "salle 25",
-      "disponibilite": false,
-      "monitoring": true,
-      "oxygene": false
-    },
-    {
-      "nom_lit": "xsd",
+      "nom_lit": "sarrq",
       "type_lit": "lit de soins intensifs",
-      "salle": "salle 25",
+      "salle": {
+        "id": 3,
+        "nom_salle": "Mark ghg",
+        "service": "Hospitalisation en soins intensifs",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
       "disponibilite": true,
       "monitoring": false,
       "oxygene": false,
-      "id": 6
+      "id": 2
+    },
+    {
+      "nom_lit": "ghhhhhh",
+      "type_lit": "lit de soins intensifs",
+      "salle": {
+        "id": 3,
+        "nom_salle": "Mark ghg",
+        "service": "Hospitalisation en soins intensifs",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
+      "disponibilite": false,
+      "monitoring": false,
+      "oxygene": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nom_lit": "sarrq",
+      "type_lit": "lit pédiatrique",
+      "salle": {
+        "id": 1,
+        "nom_salle": "Mark",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
+      "disponibilite": false,
+      "monitoring": false,
+      "oxygene": true
     }
   ],
   "salles": [
@@ -166,39 +172,60 @@
   "reservations": [
     {
       "id": 1,
-      "nom_lit": "Mark",
+      "nom_lit": "Lit n1",
       "type_lit": "lit de soins intensifs",
-      "salle": "Salle 1",
+      "salle": {
+        "id": 1,
+        "nom_salle": "Mark",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
       "disponibilite": true,
       "monitoring": false,
       "oxygene": false,
-      "date_debut": "2023-10-01T14:07",
-      "date_fin": "2023-10-01T14:06",
-      "date_reservation": "2023-10-01T14:06"
+      "date_debut": "2023-10-01T22:07",
+      "date_fin": "2023-10-01T22:09",
+      "date_reservation": "2023-10-01T22:03:36.352Z",
+      "updated_reservation": "2023-10-01T22:08:01.372Z"
+    },
+    {
+      "id": 2,
+      "nom_lit": "sarrq",
+      "type_lit": "lit de soins intensifs",
+      "salle": {
+        "id": 3,
+        "nom_salle": "Mark ghg",
+        "service": "Hospitalisation en soins intensifs",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": false,
+      "date_debut": "2023-10-01T14:03",
+      "date_fin": "2023-10-01T15:03",
+      "date_reservation": "2023-10-01T22:03:47.679Z",
+      "updated_reservation": "2023-10-01T22:07:53.457Z"
     },
     {
       "id": 3,
-      "nom_lit": "Mardfhfhk",
-      "type_lit": "lit plat en dortoir",
-      "salle": "Salle 3",
+      "nom_lit": "ghhhhhh",
+      "type_lit": "lit de soins intensifs",
+      "salle": {
+        "id": 3,
+        "nom_salle": "Mark ghg",
+        "service": "Hospitalisation en soins intensifs",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
       "disponibilite": true,
-      "monitoring": true,
-      "oxygene": true,
-      "date_debut": "2023-10-01T19:02",
-      "date_fin": "2023-10-01T14:08",
-      "date_reservation": "2023-10-01T14:06"
-    },
-    {
-      "id": 4,
-      "nom_lit": "Mardfhfhk",
-      "type_lit": "lit motorisé",
-      "salle": "Salle 4",
-      "disponibilite": true,
-      "monitoring": true,
+      "monitoring": false,
       "oxygene": false,
-      "date_debut": "2023-10-01T14:07",
-      "date_fin": "2023-10-01T19:03",
-      "date_reservation": "2023-10-01T14:06"
+      "date_debut": "2023-10-02T20:00",
+      "date_fin": "2023-10-02T22:00",
+      "date_reservation": "2023-10-01T22:03:57.707Z",
+      "updated_reservation": "2023-10-04T00:16:34.648Z"
     }
   ]
 }

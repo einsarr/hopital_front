@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Lit } from 'src/app/models/Lit.Model';
+import { Salle } from 'src/app/models/Salle.Model';
 import { LitService } from 'src/app/services/lit.service';
+import { SalleService } from 'src/app/services/salle.service';
 
 @Component({
   selector: 'app-edit-lit',
@@ -13,12 +16,12 @@ export class EditLitComponent implements OnInit{
   title="Edit lit";
   litId!:number;
   litFormGroup!: FormGroup;
-
-  constructor(private activeRoute : ActivatedRoute,private litService:LitService,private fb:FormBuilder,private router:Router){}
+  salles$! :Observable<Array<Salle>>;
+  constructor(private activeRoute : ActivatedRoute,private salleService:SalleService,private litService:LitService,private fb:FormBuilder,private router:Router){}
 
   ngOnInit(): void {
     this.litId = this.activeRoute.snapshot.params['id'];
-    console.log(this.litId);
+    this.getSalles();
     this.litService.getLitById(this.litId).subscribe({
       next : (lit)=>{
         this.litFormGroup = this.fb.group({
@@ -45,4 +48,10 @@ export class EditLitComponent implements OnInit{
       }
     });
   }
+
+  getSalles(){
+    this.salles$=this.salleService.getSalles();
+  }
+
+
 }
