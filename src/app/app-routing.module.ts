@@ -27,6 +27,9 @@ import { EditReservationComponent } from './components/edit-reservation/edit-res
 import { TypelitsComponent } from './components/typelits/typelits/typelits.component';
 import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-typelit.component';
 import { NewTypelitComponent } from './components/typelits/new-typelit/new-typelit.component';
+import { ProfilsComponent } from './components/profils/profils/profils.component';
+import { NewProfilComponent } from './components/profils/new-profil/new-profil.component';
+import { EditProfilComponent } from './components/profils/edit-profil/edit-profil.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -56,6 +59,9 @@ const routes: Routes = [
   {path:'typelits',component:TypelitsComponent, canActivate:[AuthGuard]},
   {path:'newtypelit',component:NewTypelitComponent, canActivate:[AuthGuard]},
   {path:'edittypelit/:id',component:EditTypelitComponent, canActivate:[AuthGuard]},
+  {path:'profils',component:ProfilsComponent, canActivate:[AuthGuard]},
+  {path:'newprofil',component:NewProfilComponent, canActivate:[AuthGuard]},
+  {path:'editprofil/:id',component:EditProfilComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

@@ -31,6 +31,9 @@ import { EditReservationComponent } from './components/edit-reservation/edit-res
 import { TypelitsComponent } from './components/typelits/typelits/typelits.component';
 import { NewTypelitComponent } from './components/typelits/new-typelit/new-typelit.component';
 import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-typelit.component';
+import { ProfilsComponent } from './components/profils/profils/profils.component';
+import { NewProfilComponent } from './components/profils/new-profil/new-profil.component';
+import { EditProfilComponent } from './components/profils/edit-profil/edit-profil.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +64,9 @@ import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-ty
     TypelitsComponent,
     NewTypelitComponent,
     EditTypelitComponent,
+    ProfilsComponent,
+    NewProfilComponent,
+    EditProfilComponent,
   ],
   imports: [
     BrowserModule,

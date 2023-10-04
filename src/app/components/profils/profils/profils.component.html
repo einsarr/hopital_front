@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3>Liste des profils</h3></div>
+      <div class="panel-body">
+        <div class="text-right">
+          <button class="btn btn-primary" routerLink="/newprofil"> <i class="fa fa-plus"></i> New profil</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nom profil</th>
+            <th scope="col">Disponibilité</th>
+            <th scope="col">Option</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let profil of profils$ | async">
+              <th scope="row">{{profil.id}}</th>
+              <td>{{profil.nom_profil}}</td>
+              <td><i [class]="profil.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+              <td>
+                <button (click)="EditProfil(profil)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+                <button class="btn btn-danger btn-xs" (click)="DeleteProfil(profil)"><i class="fa fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  

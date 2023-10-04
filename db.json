@@ -234,5 +234,12 @@
       "libelle_type_lit": "155",
       "disponibilite": true
     }
+  ],
+  "profils": [
+    {
+      "id": 1,
+      "nom_profil": "456",
+      "disponibilite": false
+    }
   ]
 }
