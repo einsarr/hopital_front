@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3>Liste des type de lits</h3></div>
+      <div class="panel-body">
+        <div class="text-right">
+          <button class="btn btn-primary" routerLink="/newtypelit"> <i class="fa fa-plus"></i> New type lit</button>
+        </div>
+        <br>
+        <!--div class="col-md-3">
+          <form #f="ngForm" class="form-inline" (ngSubmit)="Rechercher(f.value)">
+            <input class="form-control" type="search" ngModel name="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-info" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div-->
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nom lit</th>
+            <th scope="col">Disponibilité</th>
+            <th scope="col">Option</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let typelit of typelits$ | async">
+            <th scope="row">{{typelit.id}}</th>
+            <td>{{typelit.libelle_type_lit}}</td>
+            <td><i [class]="typelit.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+            <td>
+              <button (click)="EditTypelit(typelit)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+              <button class="btn btn-danger btn-xs" (click)="DeleteTypelit(typelit)"><i class="fa fa-trash"></i></button> |
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

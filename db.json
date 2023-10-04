@@ -227,5 +227,12 @@
       "date_reservation": "2023-10-01T22:03:57.707Z",
       "updated_reservation": "2023-10-04T00:16:34.648Z"
     }
+  ],
+  "typelits": [
+    {
+      "id": 2,
+      "libelle_type_lit": "155",
+      "disponibilite": true
+    }
   ]
 }

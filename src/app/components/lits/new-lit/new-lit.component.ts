@@ -13,7 +13,7 @@ import { SalleService } from 'src/app/services/salle.service';
   styleUrls: ['./new-lit.component.scss']
 })
 export class NewLitComponent {
-  title = "New Product";
+  title = "New Lit";
 
   formNewLit!:FormGroup;
 

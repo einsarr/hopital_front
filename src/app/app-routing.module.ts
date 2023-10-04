@@ -24,6 +24,9 @@ import { AuthGuard } from './guards/auth.guard';
 import { ReserverComponent } from './components/reserver/reserver.component';
 import { ReservationsComponent } from './components/reservations/reservations.component';
 import { EditReservationComponent } from './components/edit-reservation/edit-reservation.component';
+import { TypelitsComponent } from './components/typelits/typelits/typelits.component';
+import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-typelit.component';
+import { NewTypelitComponent } from './components/typelits/new-typelit/new-typelit.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -50,6 +53,9 @@ const routes: Routes = [
   {path:'reserver/:id',component:ReserverComponent, canActivate:[AuthGuard]},
   {path:'reservations',component:ReservationsComponent, canActivate:[AuthGuard]},
   {path:'editreservation/:id',component:EditReservationComponent, canActivate:[AuthGuard]},
+  {path:'typelits',component:TypelitsComponent, canActivate:[AuthGuard]},
+  {path:'newtypelit',component:NewTypelitComponent, canActivate:[AuthGuard]},
+  {path:'edittypelit/:id',component:EditTypelitComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({

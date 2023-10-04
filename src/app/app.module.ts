@@ -28,6 +28,9 @@ import { EditUserComponent } from './components/users/edit-user/edit-user.compon
 import { ReserverComponent } from './components/reserver/reserver.component';
 import { ReservationsComponent } from './components/reservations/reservations.component';
 import { EditReservationComponent } from './components/edit-reservation/edit-reservation.component';
+import { TypelitsComponent } from './components/typelits/typelits/typelits.component';
+import { NewTypelitComponent } from './components/typelits/new-typelit/new-typelit.component';
+import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-typelit.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { EditReservationComponent } from './components/edit-reservation/edit-res
     ReserverComponent,
     ReservationsComponent,
     EditReservationComponent,
+    TypelitsComponent,
+    NewTypelitComponent,
+    EditTypelitComponent,
   ],
   imports: [
     BrowserModule,

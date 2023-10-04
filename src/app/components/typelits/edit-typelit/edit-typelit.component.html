@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-md-4">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3>Modification d'un type de lit</h3></div>
+        <div class="panel-body">
+          <form *ngIf="typelitFormGroup" [formGroup]="typelitFormGroup" (ngSubmit)="updateTypelit()">
+            <div class="form-group">
+              <label for="nom_salle">Nom de la salle:</label>
+              <input type="text" class="form-control" id="libelle_type_lit" formControlName="libelle_type_lit">
+            </div>
+  
+            <div class="form-group">
+              <label for="disponibilite">Disponibilité</label>
+              <input type="checkbox"  class="form-check-input" formControlName="disponibilite"  id="disponibilite" name="disponibilite">
+            </div>
+  
+            <div class="form-group">
+              <button type="submit" [disabled]="!typelitFormGroup.valid" class="btn btn-warning btn-xs">Modifier</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
