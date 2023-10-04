@@ -24,15 +24,15 @@
             <label for="password">Password:</label>
             <input type="password" class="form-control" id="password" formControlName="password">
           </div>
+
           <div class="form-group">
-            <label>Role:</label>
-            <select class="form-control" formControlName="role">
-              <option>--Choisir le type de lit--</option>
-              <option>admin</option>
-              <option>User</option>
-              <option>Autre</option>
+            <label for="profil">Profil</label>
+            <select id="profil" formControlName="profil" class="form-select">
+                <option selected="selected">--Choisir le profil--</option>
+                <option *ngFor="let p of profils$ |async" [ngValue]="p">{{p.nom_profil}}</option>
             </select>
-          </div>
+          </div>  
+
           <div class="form-group">
             <label for="isActive">Etat </label>
             <input type="checkbox" id="isActive" formControlName="isActive">

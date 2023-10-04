@@ -9,26 +9,19 @@
             <input type="text" class="form-control" formControlName="nom_lit" id="nom_lit">
           </div>
           <div class="form-group">
-            <label for="type_lit">Type de lit:</label>
-            <input type="text" class="form-control" formControlName="type_lit" id="type_lit">
+            <label for="type_lit">Type de lit</label>
+            <select id="type_lit" formControlName="type_lit" class="form-select">
+                <option *ngFor="let lt of typelits$ |async" [ngValue]="lt">{{lt.libelle_type_lit}}</option>
+            </select>
           </div>
          
-           <div class="form-group">
+          <div class="form-group">
             <label for="salle">Salle</label>
             <select id="salle" formControlName="salle" class="form-select">
                 <option *ngFor="let s of salles$ |async" [ngValue]="s">{{s.nom_salle}}</option>
             </select>
           </div>  
 
-          <div class="form-group">
-            <label for="sel1">Type de lit:</label>
-            <select class="form-control" id="sel1">
-              <option>lit de soins intensifs</option>
-              <option>lit pédiatrique</option>
-              <option>lit plat en dortoir</option>
-              <option>lit motorisé</option>
-            </select>
-          </div>
           <div class="form-group">
             <label for="disponibilite">Disponibilité </label>
             <input type="checkbox" id="disponibilite" formControlName="disponibilite" onclick="return false;">

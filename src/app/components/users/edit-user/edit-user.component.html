@@ -27,13 +27,12 @@
               </div>
 
             <div class="form-group">
-              <label>Le role:</label>
-              <select class="form-control" formControlName="role" id="role">
-                <option>admin</option>
-                <option>User</option>
-                <option>Autre</option>
+              <label for="salle">Profil</label>
+              <select id="salle" formControlName="profil" class="form-select">
+                  <option selected="selected">--Choisir le profil--</option>
+                  <option *ngFor="let p of profils$ |async" [ngValue]="p">{{p.nom_profil}}</option>
               </select>
-            </div>
+            </div> 
 
             <div class="form-group">
                 <label for="isActive">Etat </label>

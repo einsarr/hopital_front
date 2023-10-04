@@ -1,3 +1,4 @@
+import { Profil } from "./Profil.Model"
 
 export interface User{
     id: number
@@ -6,6 +7,6 @@ export interface User{
     email: string
     password: string
     telephone: string
-    role: string
+    profil: Profil
     isActive: string
 }

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Profil } from 'src/app/models/Profil.Model';
 import { User } from 'src/app/models/User.Model';
+import { ProfilService } from 'src/app/services/profil.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -12,7 +14,9 @@ import { UsersService } from 'src/app/services/users.service';
 export class UsersComponent {
   title="List of users";
   users$! :Observable<Array<User>>;
-  constructor(private userService:UsersService,private router:Router){}
+  profils$! :Observable<Array<Profil>>;
+  
+  constructor(private userService:UsersService,private profilService:ProfilService,private router:Router){}
   ngOnInit() {
     this.getUsers();
   }
@@ -27,12 +31,15 @@ export class UsersComponent {
       this.userService.deleteUser(user).subscribe({
         next:value =>{
           this.getUsers();
-          //this.products$.pipe(filter(p=>p.id==product.id))
         }
       });
   }
 
   EditUser(user:User){
     this.router.navigateByUrl('/edituser/'+user.id);
+  }
+
+  getProfils(){
+    this.profils$=this.profilService.getProfils();
   }
 }

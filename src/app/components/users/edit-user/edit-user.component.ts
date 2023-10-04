@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Profil } from 'src/app/models/Profil.Model';
 import { User } from 'src/app/models/User.Model';
+import { ProfilService } from 'src/app/services/profil.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -13,11 +16,12 @@ export class EditUserComponent {
   title="Edit user";
   userId!:number;
   userFormGroup!: FormGroup;
-
-  constructor(private activeRoute : ActivatedRoute,private usersServic:UsersService,private fb:FormBuilder,private router:Router){}
+  profils$! :Observable<Array<Profil>>;
+  constructor(private activeRoute : ActivatedRoute,private usersServic:UsersService,private profilService:ProfilService,private fb:FormBuilder,private router:Router){}
 
   ngOnInit(): void {
     this.userId = this.activeRoute.snapshot.params['id'];
+    this.getProfils();
     this.usersServic.getUserById(this.userId).subscribe({
       next : (user)=>{
         this.userFormGroup = this.fb.group({
@@ -27,7 +31,7 @@ export class EditUserComponent {
           telephone : this.fb.control(user.telephone),
           email : this.fb.control(user.email),
           password : this.fb.control(user.password),
-          role : this.fb.control(user.role),
+          profil : this.fb.control(user.profil),
           isActive : this.fb.control(user.isActive),
         });
       },error : error=>{
@@ -46,4 +50,8 @@ export class EditUserComponent {
     });
   }
   
+  getProfils(){
+    this.profils$=this.profilService.getProfils();
+  }
+
 }

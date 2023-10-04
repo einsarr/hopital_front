@@ -7,7 +7,11 @@
       "telephone": "00221776171703",
       "email": "einsarr@gmail.com",
       "password": "P@sser2023",
-      "role": "admin",
+      "profil": {
+        "nom_profil": "Sage femme",
+        "disponibilite": true,
+        "id": 4
+      },
       "isActive": true
     },
     {
@@ -17,27 +21,39 @@
       "telephone": "221776171703",
       "email": "einsarrmohas@gmail.com",
       "password": "P@sser2023hfhf",
-      "role": "User",
-      "isActive": false
+      "profil": {
+        "nom_profil": "User",
+        "disponibilite": true,
+        "id": 2
+      },
+      "isActive": true
     },
     {
       "id": "einsssarr@gmail.com",
       "prenom": "Moussa",
       "nom": "SARR",
-      "password": "P@sser2023",
-      "email": "einsareedsr@gmail.com",
       "telephone": "00221776171703",
-      "role": "admin",
+      "email": "einsareedsr@gmail.com",
+      "password": "P@sser2023",
+      "profil": {
+        "id": 1,
+        "nom_profil": "Admin",
+        "disponibilite": false
+      },
       "isActive": false
     },
     {
       "id": "einsasszeerr@gmail.com",
       "prenom": "Moussa",
       "nom": "SARR",
-      "password": "P@sser2023",
-      "email": "einsarssrffddr@gmail.com",
       "telephone": "00221776171703",
-      "role": "admin",
+      "email": "einsarssrffddr@gmail.com",
+      "password": "P@sser2023",
+      "profil": {
+        "nom_profil": "Medecin",
+        "disponibilite": true,
+        "id": 3
+      },
       "isActive": true
     },
     {
@@ -47,29 +63,70 @@
       "telephone": "771008706",
       "email": "andiosambou2005@yahoo.fr",
       "password": "sdefff",
-      "role": "admin",
+      "profil": {
+        "id": 1,
+        "nom_profil": "Admin",
+        "disponibilite": false
+      },
       "isActive": true
+    },
+    {
+      "prenom": "LANDING",
+      "nom": "CORREA",
+      "email": "Sarr-msq@hotmail.fr",
+      "telephone": "221776171703",
+      "password": "qqqqqqq",
+      "profil": {
+        "nom_profil": "Sage femme",
+        "disponibilite": true,
+        "id": 4
+      },
+      "isActive": true,
+      "id": "uVwHUoo"
+    },
+    {
+      "prenom": "BOUBACAR",
+      "nom": "SADIO",
+      "email": "e1111insarr@gmail.com",
+      "telephone": "777",
+      "password": "1234",
+      "profil": {
+        "id": 1,
+        "nom_profil": "Admin",
+        "disponibilite": false
+      },
+      "isActive": true,
+      "id": "kBqcvTX"
     }
   ],
   "lits": [
     {
       "id": 1,
       "nom_lit": "Lit n1",
-      "type_lit": "lit de soins intensifs",
+      "type_lit": {
+        "libelle_type_lit": "lit pédiatrique",
+        "disponibilite": true,
+        "id": 3
+      },
       "salle": {
-        "id": 1,
-        "nom_salle": "Mark",
-        "service": "Hospitalisation en pédiatrie",
+        "id": 2,
+        "nom_salle": "Mardfhfhk",
+        "service": "Hospitalisation de jour",
         "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": true
+        "disponibilite": false
       },
       "disponibilite": true,
       "monitoring": true,
       "oxygene": true
     },
     {
+      "id": 2,
       "nom_lit": "sarrq",
-      "type_lit": "lit de soins intensifs",
+      "type_lit": {
+        "libelle_type_lit": "lit pédiatrique",
+        "disponibilite": true,
+        "id": 3
+      },
       "salle": {
         "id": 3,
         "nom_salle": "Mark ghg",
@@ -79,8 +136,7 @@
       },
       "disponibilite": true,
       "monitoring": false,
-      "oxygene": false,
-      "id": 2
+      "oxygene": false
     },
     {
       "nom_lit": "ghhhhhh",
@@ -111,6 +167,25 @@
       "disponibilite": false,
       "monitoring": false,
       "oxygene": true
+    },
+    {
+      "nom_lit": "sarrq",
+      "type_lit": {
+        "id": 2,
+        "libelle_type_lit": "155",
+        "disponibilite": true
+      },
+      "salle": {
+        "id": 2,
+        "nom_salle": "Mardfhfhk",
+        "service": "Hospitalisation de jour",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": false
+      },
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": false,
+      "id": 5
     }
   ],
   "salles": [
@@ -231,15 +306,45 @@
   "typelits": [
     {
       "id": 2,
-      "libelle_type_lit": "155",
+      "libelle_type_lit": "lit de soins intensifs",
       "disponibilite": true
+    },
+    {
+      "libelle_type_lit": "lit pédiatrique",
+      "disponibilite": true,
+      "id": 3
+    },
+    {
+      "libelle_type_lit": "lit plat en dortoir",
+      "disponibilite": true,
+      "id": 4
+    },
+    {
+      "libelle_type_lit": "lit motorisé",
+      "disponibilite": true,
+      "id": 5
     }
   ],
   "profils": [
     {
       "id": 1,
-      "nom_profil": "456",
+      "nom_profil": "Admin",
       "disponibilite": false
+    },
+    {
+      "nom_profil": "User",
+      "disponibilite": true,
+      "id": 2
+    },
+    {
+      "nom_profil": "Medecin",
+      "disponibilite": true,
+      "id": 3
+    },
+    {
+      "nom_profil": "Sage femme",
+      "disponibilite": true,
+      "id": 4
     }
   ]
 }

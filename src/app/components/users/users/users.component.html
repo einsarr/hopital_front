@@ -13,7 +13,7 @@
           <th scope="col">Nom</th>
           <th scope="col">Téléphone</th>
           <th scope="col">Email</th>
-          <th scope="col">Role</th>
+          <th scope="col">Profil</th>
           <th scope="col">Etat</th>
           <th scope="col">Option</th>
         </tr>
@@ -25,7 +25,7 @@
             <td>{{user.nom}}</td>
             <td>{{user.telephone}}</td>
             <td>{{user.email}}</td>
-            <td>{{user.role}}</td>
+            <td>{{user.profil.nom_profil}}</td>
             <td><i [class]="user.isActive?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
             <td>
               <button (click)="EditUser(user)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |

@@ -31,7 +31,7 @@
         <tr *ngFor="let lit of lits$ | async">
           <th scope="row">{{lit.id}}</th>
           <td>{{lit.nom_lit}}</td>
-          <td>{{lit.type_lit}}</td>
+          <td>{{lit.type_lit.libelle_type_lit}}</td>
           <td>{{lit.salle.nom_salle}}</td>
           <td><i [class]="lit.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
           <td><i [class]="lit.monitoring?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>

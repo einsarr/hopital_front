@@ -4,8 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Lit } from 'src/app/models/Lit.Model';
 import { Salle } from 'src/app/models/Salle.Model';
+import { Typelit } from 'src/app/models/Typelit.Model';
 import { LitService } from 'src/app/services/lit.service';
 import { SalleService } from 'src/app/services/salle.service';
+import { TypelitService } from 'src/app/services/typelit.service';
 
 @Component({
   selector: 'app-edit-lit',
@@ -17,11 +19,13 @@ export class EditLitComponent implements OnInit{
   litId!:number;
   litFormGroup!: FormGroup;
   salles$! :Observable<Array<Salle>>;
-  constructor(private activeRoute : ActivatedRoute,private salleService:SalleService,private litService:LitService,private fb:FormBuilder,private router:Router){}
+  typelits$! :Observable<Array<Typelit>>;
+  constructor(private activeRoute : ActivatedRoute,private salleService:SalleService,private typelitService:TypelitService,private litService:LitService,private fb:FormBuilder,private router:Router){}
 
   ngOnInit(): void {
     this.litId = this.activeRoute.snapshot.params['id'];
     this.getSalles();
+    this.getTypelits();
     this.litService.getLitById(this.litId).subscribe({
       next : (lit)=>{
         this.litFormGroup = this.fb.group({
@@ -51,6 +55,10 @@ export class EditLitComponent implements OnInit{
 
   getSalles(){
     this.salles$=this.salleService.getSalles();
+  }
+
+  getTypelits(){
+    this.typelits$=this.typelitService.getTypelits();
   }
 
 

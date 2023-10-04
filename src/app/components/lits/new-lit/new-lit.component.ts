@@ -4,8 +4,10 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Lit } from 'src/app/models/Lit.Model';
 import { Salle } from 'src/app/models/Salle.Model';
+import { Typelit } from 'src/app/models/Typelit.Model';
 import { LitService } from 'src/app/services/lit.service';
 import { SalleService } from 'src/app/services/salle.service';
+import { TypelitService } from 'src/app/services/typelit.service';
 
 @Component({
   selector: 'app-new-lit',
@@ -18,12 +20,14 @@ export class NewLitComponent {
   formNewLit!:FormGroup;
 
   salles$! :Observable<Array<Salle>>;
-  constructor(private fb: FormBuilder,private litService:LitService,private salleService:SalleService,private router:Router){
+  typelits$! :Observable<Array<Typelit>>;
+  constructor(private fb: FormBuilder,private litService:LitService,private salleService:SalleService,private typelitService:TypelitService,private router:Router){
     this.form();
   }
 
   ngOnInit(){
     this.getSalles();
+    this.getTypelits();
   }
 
   form(){
@@ -41,7 +45,6 @@ export class NewLitComponent {
     let lit:Lit=this.formNewLit.value;
     this.litService.saveLit(lit).subscribe({
       next : data =>{
-        //alert(JSON.stringify(data));
         this.router.navigateByUrl('/lits');
       }, error : err =>{
         console.log(err);
@@ -59,6 +62,10 @@ export class NewLitComponent {
 */
     getSalles(){
       this.salles$=this.salleService.getSalles();
+    }
+
+    getTypelits(){
+      this.typelits$=this.typelitService.getTypelits();
     }
 
 }
