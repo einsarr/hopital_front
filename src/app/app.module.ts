@@ -34,6 +34,12 @@ import { EditTypelitComponent } from './components/typelits/edit-typelit/edit-ty
 import { ProfilsComponent } from './components/profils/profils/profils.component';
 import { NewProfilComponent } from './components/profils/new-profil/new-profil.component';
 import { EditProfilComponent } from './components/profils/edit-profil/edit-profil.component';
+import { StructuresComponent } from './components/structures/structures/structures.component';
+import { EditStructureComponent } from './components/structures/edit-structure/edit-structure.component';
+import { NewStructureComponent } from './components/structures/new-structure/new-structure.component';
+import { TypestructuresComponent } from './components/structures/typestructures/typestructures.component';
+import { EditTypestructureComponent } from './components/structures/edit-typestructure/edit-typestructure.component';
+import { NewTypestructureComponent } from './components/structures/new-typestructure/new-typestructure.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +73,12 @@ import { EditProfilComponent } from './components/profils/edit-profil/edit-profi
     ProfilsComponent,
     NewProfilComponent,
     EditProfilComponent,
+    StructuresComponent,
+    EditStructureComponent,
+    NewStructureComponent,
+    TypestructuresComponent,
+    EditTypestructureComponent,
+    NewTypestructureComponent,
   ],
   imports: [
     BrowserModule,

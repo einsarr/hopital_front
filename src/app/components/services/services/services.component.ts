@@ -27,7 +27,6 @@ export class ServicesComponent {
         this.serviceService.deleteService(service).subscribe({
           next:value =>{
             this.getServices();
-            //this.products$.pipe(filter(p=>p.id==product.id))
           }
         });
     }

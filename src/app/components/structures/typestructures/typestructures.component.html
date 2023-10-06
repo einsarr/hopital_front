@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3>Liste des type structures</h3></div>
+      <div class="panel-body">
+        <div class="text-right">
+          <button class="btn btn-primary" routerLink="/newtypestructure"> <i class="fa fa-plus"></i> New type structure</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nom typestructure</th>
+            <th scope="col">Disponibilité</th>
+            <th scope="col">Option</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let typestructure of typestructures$ | async">
+              <th scope="row">{{typestructure.id}}</th>
+              <td>{{typestructure.libelle_type_structure}}</td>
+              <td><i [class]="typestructure.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+              <td>
+                <button (click)="EditTypestructure(typestructure)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+                <button class="btn btn-danger btn-xs" (click)="DeleteTypestructure(typestructure)"><i class="fa fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  

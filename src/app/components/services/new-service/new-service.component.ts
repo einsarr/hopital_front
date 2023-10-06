@@ -35,7 +35,6 @@ export class NewServiceComponent {
     let service:Service=this.formNewService.value;
     this.serviceService.saveService(service).subscribe({
       next : data =>{
-        //alert(JSON.stringify(data));
         this.router.navigateByUrl('/services');
       }, error : err =>{
         console.log(err);

@@ -97,6 +97,34 @@
       },
       "isActive": true,
       "id": "kBqcvTX"
+    },
+    {
+      "prenom": "Pauline Innocence",
+      "nom": "CORREA",
+      "email": "Sarr-ms@hotmail.fr",
+      "telephone": "777",
+      "password": "456",
+      "profil": {
+        "nom_profil": "User",
+        "disponibilite": true,
+        "id": 2
+      },
+      "isActive": true,
+      "id": "AxJ4nzG"
+    },
+    {
+      "prenom": "SADIBOU",
+      "nom": "SADIO",
+      "email": "andiosambou2005@yahoo.fr",
+      "telephone": "771008706",
+      "password": "123",
+      "profil": {
+        "id": 1,
+        "nom_profil": "Admin",
+        "disponibilite": false
+      },
+      "isActive": true,
+      "id": "l1ht8UA"
     }
   ],
   "lits": [
@@ -186,6 +214,44 @@
       "monitoring": false,
       "oxygene": false,
       "id": 5
+    },
+    {
+      "nom_lit": "sarrq",
+      "type_lit": {
+        "libelle_type_lit": "lit pédiatrique",
+        "disponibilite": true,
+        "id": 3
+      },
+      "salle": {
+        "id": 2,
+        "nom_salle": "Mardfhfhk",
+        "service": "Hospitalisation de jour",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": false
+      },
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": true,
+      "id": 6
+    },
+    {
+      "nom_lit": "sarr",
+      "type_lit": {
+        "libelle_type_lit": "MOUSSA",
+        "disponibilite": true,
+        "id": 6
+      },
+      "salle": {
+        "nom_salle": "Moussa",
+        "service": "Hospitalisation",
+        "type_salle": "Hospitalisation à temps partiel",
+        "disponibilite": true,
+        "id": 5
+      },
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": true,
+      "id": 7
     }
   ],
   "salles": [
@@ -195,35 +261,14 @@
       "service": "Hospitalisation en pédiatrie",
       "type_salle": "Hospitalisation en pédiatrie",
       "disponibilite": true
-    },
-    {
-      "id": 2,
-      "nom_salle": "Mardfhfhk",
-      "service": "Hospitalisation de jour",
-      "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilite": false
-    },
-    {
-      "id": 3,
-      "nom_salle": "Mark ghg",
-      "service": "Hospitalisation en soins intensifs",
-      "type_salle": "Hospitalisation en pédiatrie",
-      "disponibilite": true
-    },
-    {
-      "id": 4,
-      "nom_salle": "Marknn njiy",
-      "service": "Marknn njiy",
-      "type_salle": "Hospitalisation complète",
-      "disponibilite": true
     }
   ],
   "services": [
     {
       "id": 1,
-      "nom_service": "médecine générale",
-      "structure": "OGY",
-      "disponibilite": true
+      "nom_service": "Médecine générale",
+      "structure": "FANN",
+      "disponibilite": false
     },
     {
       "id": 2,
@@ -239,9 +284,21 @@
     },
     {
       "id": 4,
-      "nom_service": "cardiologie",
+      "nom_service": "Cardiologie",
       "structure": "Abasse Ndao",
       "disponibilite": true
+    },
+    {
+      "id": 5,
+      "nom_service": "Médecine générale",
+      "structure": "Clinique 17",
+      "disponibilite": true
+    },
+    {
+      "nom_service": "sssssssss",
+      "structure": "Clinique 17",
+      "disponibilite": true,
+      "id": 6
     }
   ],
   "reservations": [
@@ -323,6 +380,11 @@
       "libelle_type_lit": "lit motorisé",
       "disponibilite": true,
       "id": 5
+    },
+    {
+      "libelle_type_lit": "MOUSSA",
+      "disponibilite": true,
+      "id": 6
     }
   ],
   "profils": [
@@ -345,6 +407,34 @@
       "nom_profil": "Sage femme",
       "disponibilite": true,
       "id": 4
+    }
+  ],
+  "structures": [
+    {
+      "id": 1,
+      "nom_structure": "CEM NIAMONE",
+      "adresse": "NGANDEK AMAR",
+      "telephone": "00221776171703",
+      "email": "andiosambou2005@yahoo.fr",
+      "fax": "DDDDD",
+      "typestructure": {
+        "libelle_type_structure": "ssss",
+        "disponibilite": true,
+        "id": 1
+      },
+      "disponibilite": true
+    }
+  ],
+  "typestructures": [
+    {
+      "libelle_type_structure": "ssss",
+      "disponibilite": true,
+      "id": 1
+    },
+    {
+      "libelle_type_structure": "dhfgg lgh",
+      "disponibilite": true,
+      "id": 2
     }
   ]
 }

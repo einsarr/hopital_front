@@ -30,6 +30,12 @@ import { NewTypelitComponent } from './components/typelits/new-typelit/new-typel
 import { ProfilsComponent } from './components/profils/profils/profils.component';
 import { NewProfilComponent } from './components/profils/new-profil/new-profil.component';
 import { EditProfilComponent } from './components/profils/edit-profil/edit-profil.component';
+import { StructuresComponent } from './components/structures/structures/structures.component';
+import { NewStructureComponent } from './components/structures/new-structure/new-structure.component';
+import { EditStructureComponent } from './components/structures/edit-structure/edit-structure.component';
+import { TypestructuresComponent } from './components/structures/typestructures/typestructures.component';
+import { NewTypestructureComponent } from './components/structures/new-typestructure/new-typestructure.component';
+import { EditTypestructureComponent } from './components/structures/edit-typestructure/edit-typestructure.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -61,7 +67,13 @@ const routes: Routes = [
   {path:'edittypelit/:id',component:EditTypelitComponent, canActivate:[AuthGuard]},
   {path:'profils',component:ProfilsComponent, canActivate:[AuthGuard]},
   {path:'newprofil',component:NewProfilComponent, canActivate:[AuthGuard]},
-  {path:'editprofil/:id',component:EditProfilComponent, canActivate:[AuthGuard]}
+  {path:'editprofil/:id',component:EditProfilComponent, canActivate:[AuthGuard]},
+  {path:'structures',component:StructuresComponent, canActivate:[AuthGuard]},
+  {path:'newstructure',component:NewStructureComponent, canActivate:[AuthGuard]},
+  {path:'editstructure/:id',component:EditStructureComponent, canActivate:[AuthGuard]},
+  {path:'typestructures',component:TypestructuresComponent, canActivate:[AuthGuard]},
+  {path:'newtypestructure',component:NewTypestructureComponent, canActivate:[AuthGuard]},
+  {path:'edittypestructure/:id',component:EditTypestructureComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

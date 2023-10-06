@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3>Liste des structures</h3></div>
+      <div class="panel-body">
+        <div class="text-right">
+          <button class="btn btn-primary" routerLink="/newstructure"> <i class="fa fa-plus"></i> New structure</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nom structure</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Telephone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Fax</th>
+            <th scope="col">Type structure</th>
+            <th scope="col">Disponibilité</th>
+            <th scope="col">Option</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let structure of structures$ | async">
+              <th scope="row">{{structure.id}}</th>
+              <td>{{structure.nom_structure}}</td>
+              <td>{{structure.adresse}}</td>
+              <td>{{structure.telephone}}</td>
+              <td>{{structure.email}}</td>
+              <td>{{structure.fax}}</td>
+              <td>{{structure.typestructure.libelle_type_structure}}</td>
+              <td><i [class]="structure.disponibilite?'fa fa-check text-success':'fa fa-close text-danger'"></i></td>
+              <td>
+                <button (click)="EditStructure(structure)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button> |
+                <button class="btn btn-danger btn-xs" (click)="DeleteStructure(structure)"><i class="fa fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
