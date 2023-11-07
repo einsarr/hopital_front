@@ -36,6 +36,7 @@ import { EditStructureComponent } from './components/structures/edit-structure/e
 import { TypestructuresComponent } from './components/structures/typestructures/typestructures.component';
 import { NewTypestructureComponent } from './components/structures/new-typestructure/new-typestructure.component';
 import { EditTypestructureComponent } from './components/structures/edit-typestructure/edit-typestructure.component';
+import { LitsdisponibleComponent } from './components/lits/litsdisponible/litsdisponible.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -73,7 +74,8 @@ const routes: Routes = [
   {path:'editstructure/:id',component:EditStructureComponent, canActivate:[AuthGuard]},
   {path:'typestructures',component:TypestructuresComponent, canActivate:[AuthGuard]},
   {path:'newtypestructure',component:NewTypestructureComponent, canActivate:[AuthGuard]},
-  {path:'edittypestructure/:id',component:EditTypestructureComponent, canActivate:[AuthGuard]}
+  {path:'edittypestructure/:id',component:EditTypestructureComponent, canActivate:[AuthGuard]},
+  {path:'litsdisponible',component:LitsdisponibleComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
