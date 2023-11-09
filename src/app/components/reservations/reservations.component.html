@@ -9,7 +9,9 @@
             <label for="typelit">Type de lit</label>
             <select id="type_lit" formControlName="type_lit" class="form-select">
                 <option selected="selected">--Choisir le type de lit--</option>
-                <option *ngFor="let tl of lits$ |async" [ngValue]="tl">{{tl.nom_lit}}</option>
+                <option>berceau</option>
+                <option>grand lit enfant</option>
+                <option>grand lit adulte couveuse et table de rea</option>
             </select>
           </div>  
 

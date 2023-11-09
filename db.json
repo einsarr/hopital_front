@@ -129,138 +129,96 @@
   ],
   "lits": [
     {
-      "id": 1,
-      "nom_lit": "Lit n1",
+      "nom_lit": "Lit A",
       "type_lit": {
-        "libelle_type_lit": "lit pédiatrique",
-        "disponibilite": true,
-        "id": 3
-      },
-      "salle": {
         "id": 2,
-        "nom_salle": "Mardfhfhk",
-        "service": "Hospitalisation de jour",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": false
-      },
-      "disponibilite": true,
-      "monitoring": true,
-      "oxygene": true
-    },
-    {
-      "id": 2,
-      "nom_lit": "sarrq",
-      "type_lit": {
-        "libelle_type_lit": "lit pédiatrique",
-        "disponibilite": true,
-        "id": 3
-      },
-      "salle": {
-        "id": 3,
-        "nom_salle": "Mark ghg",
-        "service": "Hospitalisation en soins intensifs",
-        "type_salle": "Hospitalisation en pédiatrie",
+        "libelle_type_lit": "berceau",
         "disponibilite": true
       },
-      "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false
-    },
-    {
-      "nom_lit": "ghhhhhh",
-      "type_lit": "lit de soins intensifs",
-      "salle": {
-        "id": 3,
-        "nom_salle": "Mark ghg",
-        "service": "Hospitalisation en soins intensifs",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": true
-      },
-      "disponibilite": false,
-      "monitoring": false,
-      "oxygene": false,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "nom_lit": "sarrq",
-      "type_lit": "lit pédiatrique",
       "salle": {
         "id": 1,
-        "nom_salle": "Mark",
+        "nom_salle": "Salles 34",
         "service": "Hospitalisation en pédiatrie",
         "type_salle": "Hospitalisation en pédiatrie",
         "disponibilite": true
       },
-      "disponibilite": false,
-      "monitoring": false,
-      "oxygene": true
-    },
-    {
-      "nom_lit": "sarrq",
-      "type_lit": {
-        "id": 2,
-        "libelle_type_lit": "155",
-        "disponibilite": true
-      },
-      "salle": {
-        "id": 2,
-        "nom_salle": "Mardfhfhk",
-        "service": "Hospitalisation de jour",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": false
-      },
-      "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false,
-      "id": 5
-    },
-    {
-      "nom_lit": "sarrq",
-      "type_lit": {
-        "libelle_type_lit": "lit pédiatrique",
-        "disponibilite": true,
-        "id": 3
-      },
-      "salle": {
-        "id": 2,
-        "nom_salle": "Mardfhfhk",
-        "service": "Hospitalisation de jour",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": false
-      },
       "disponibilite": true,
       "monitoring": false,
       "oxygene": true,
-      "id": 6
+      "id": 1
     },
     {
-      "nom_lit": "sarr",
+      "nom_lit": "Lit B",
       "type_lit": {
-        "libelle_type_lit": "MOUSSA",
-        "disponibilite": true,
-        "id": 6
+        "id": 2,
+        "libelle_type_lit": "berceau",
+        "disponibilite": true
       },
       "salle": {
-        "nom_salle": "Moussa",
-        "service": "Hospitalisation",
-        "type_salle": "Hospitalisation à temps partiel",
-        "disponibilite": true,
-        "id": 5
+        "id": 1,
+        "nom_salle": "Salles 34",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
       },
       "disponibilite": true,
       "monitoring": true,
       "oxygene": true,
-      "id": 7
+      "id": 2
+    },
+    {
+      "nom_lit": "Lit C",
+      "type_lit": {
+        "id": 3,
+        "libelle_type_lit": "grand lit enfant",
+        "disponibilite": true
+      },
+      "salle": {
+        "id": 1,
+        "nom_salle": "Salles 34",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
+      "disponibilite": true,
+      "monitoring": true,
+      "oxygene": true,
+      "id": 3
+    },
+    {
+      "nom_lit": "Lit D",
+      "type_lit": {
+        "id": 4,
+        "libelle_type_lit": "grand lit adulte couveuse et table de rea",
+        "disponibilite": true
+      },
+      "salle": {
+        "id": 1,
+        "nom_salle": "Salles 34",
+        "service": "Hospitalisation en pédiatrie",
+        "type_salle": "Hospitalisation en pédiatrie",
+        "disponibilite": true
+      },
+      "disponibilite": true,
+      "monitoring": false,
+      "oxygene": true,
+      "id": 4
     }
   ],
   "salles": [
     {
       "id": 1,
-      "nom_salle": "Mark",
+      "nom_salle": "Salles 34",
       "service": "Hospitalisation en pédiatrie",
       "type_salle": "Hospitalisation en pédiatrie",
       "disponibilite": true
+    },
+    {
+      "nom_salle": "Salles 36",
+      "service": "Hospitalisation",
+      "type_salle": "Hospitalisation complète",
+      "disponibilite": true,
+      "id": 2
     }
   ],
   "services": [
@@ -301,90 +259,22 @@
       "id": 6
     }
   ],
-  "reservations": [
-    {
-      "id": 1,
-      "nom_lit": "Lit n1",
-      "type_lit": "lit de soins intensifs",
-      "salle": {
-        "id": 1,
-        "nom_salle": "Mark",
-        "service": "Hospitalisation en pédiatrie",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": true
-      },
-      "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false,
-      "date_debut": "2023-10-01T22:07",
-      "date_fin": "2023-10-01T22:09",
-      "date_reservation": "2023-10-01T22:03:36.352Z",
-      "updated_reservation": "2023-10-01T22:08:01.372Z"
-    },
-    {
-      "id": 2,
-      "nom_lit": "sarrq",
-      "type_lit": "lit de soins intensifs",
-      "salle": {
-        "id": 3,
-        "nom_salle": "Mark ghg",
-        "service": "Hospitalisation en soins intensifs",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": true
-      },
-      "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false,
-      "date_debut": "2023-10-01T14:03",
-      "date_fin": "2023-10-01T15:03",
-      "date_reservation": "2023-10-01T22:03:47.679Z",
-      "updated_reservation": "2023-10-01T22:07:53.457Z"
-    },
-    {
-      "id": 3,
-      "nom_lit": "ghhhhhh",
-      "type_lit": "lit de soins intensifs",
-      "salle": {
-        "id": 3,
-        "nom_salle": "Mark ghg",
-        "service": "Hospitalisation en soins intensifs",
-        "type_salle": "Hospitalisation en pédiatrie",
-        "disponibilite": true
-      },
-      "disponibilite": true,
-      "monitoring": false,
-      "oxygene": false,
-      "date_debut": "2023-10-02T20:00",
-      "date_fin": "2023-10-02T22:00",
-      "date_reservation": "2023-10-01T22:03:57.707Z",
-      "updated_reservation": "2023-10-04T00:16:34.648Z"
-    }
-  ],
+  "reservations": [],
   "typelits": [
     {
       "id": 2,
-      "libelle_type_lit": "lit de soins intensifs",
+      "libelle_type_lit": "berceau",
       "disponibilite": true
     },
     {
-      "libelle_type_lit": "lit pédiatrique",
-      "disponibilite": true,
-      "id": 3
+      "id": 3,
+      "libelle_type_lit": "grand lit enfant",
+      "disponibilite": true
     },
     {
-      "libelle_type_lit": "lit plat en dortoir",
-      "disponibilite": true,
-      "id": 4
-    },
-    {
-      "libelle_type_lit": "lit motorisé",
-      "disponibilite": true,
-      "id": 5
-    },
-    {
-      "libelle_type_lit": "MOUSSA",
-      "disponibilite": true,
-      "id": 6
+      "id": 4,
+      "libelle_type_lit": "grand lit adulte couveuse et table de rea",
+      "disponibilite": true
     }
   ],
   "profils": [
