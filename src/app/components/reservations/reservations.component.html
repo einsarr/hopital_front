@@ -3,25 +3,23 @@
     <div class="panel panel-info">
       <div class="panel-heading"><h3>Reservation</h3></div>
       <div class="panel-body">
-        <form>
+        <form [formGroup]="formSearch" (ngSubmit)="searchLit()">
         
           <div class="form-group">
             <label for="typelit">Type de lit</label>
             <select id="type_lit" formControlName="type_lit" class="form-select">
                 <option selected="selected">--Choisir le type de lit--</option>
-                <option>berceau</option>
-                <option>grand lit enfant</option>
-                <option>grand lit adulte couveuse et table de rea</option>
+                <option *ngFor="let tl of typelits$ |async" [ngValue]="tl">{{tl.libelle_type_lit}}</option>
             </select>
-          </div>  
-
-          <div class="form-group">
-            <label for="disponibilite">Disponibilité</label>
-            <input type="checkbox" class="form-check-input" checked="checked" formControlName="disponibilite"  id="disponibilite">
           </div>
 
+          <!--div class="form-group">
+            <label for="disponibilite">Disponibilité</label>
+            <input type="checkbox" class="form-check-input" checked="checked" formControlName="disponibilite"  id="disponibilite">
+          </div-->
+
           <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-xs"><span class="fa fa-search"></span>Rechercher</button>
+            <button type="submit" [class]="2"  class="btn btn-primary btn-xs"><span class="fa fa-search"></span>Rechercher</button>
           </div>
         </form>
       </div>

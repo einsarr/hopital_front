@@ -41,6 +41,7 @@ import { TypestructuresComponent } from './components/structures/typestructures/
 import { EditTypestructureComponent } from './components/structures/edit-typestructure/edit-typestructure.component';
 import { NewTypestructureComponent } from './components/structures/new-typestructure/new-typestructure.component';
 import { LitsdisponibleComponent } from './components/lits/litsdisponible/litsdisponible.component';
+import { LitsearchComponent } from './components/lits/litsearch/litsearch.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { LitsdisponibleComponent } from './components/lits/litsdisponible/litsdi
     EditTypestructureComponent,
     NewTypestructureComponent,
     LitsdisponibleComponent,
+    LitsearchComponent,
   ],
   imports: [
     BrowserModule,

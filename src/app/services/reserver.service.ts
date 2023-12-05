@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Reservation } from '../models/Reservation.Model';
 import { Observable } from 'rxjs';
+import { Lit } from '../models/Lit.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +34,7 @@ export class ReserverService {
       return this.http.patch<Reservation>(this.baseUrl+"/reservations/"+reserver.id,reserver);
     }
 
+    searchReservation(litId:Lit){
+      return this.http.get<Lit>(this.baseUrl+"/litsearch/"+litId);
+    }
 }

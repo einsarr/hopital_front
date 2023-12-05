@@ -16,6 +16,11 @@ export class LitService {
           return this.http.get<Array<Lit>>(this.baseUrl+"/lits");
       }
 
+      public gestLits(litId: number):Observable<Array<Lit>>{
+        return this.http.get<Array<Lit>>(this.baseUrl+"/lits/"+litId);
+    }
+      
+
       public deleteLit(lit:Lit){
         return this.http.delete<Lit>(this.baseUrl+"/lits/"+lit.id);
       }
@@ -35,5 +40,9 @@ export class LitService {
       public disponibiliteLit(lit:Lit):Observable<Lit>{
         return this.http.patch<Lit>(this.baseUrl+"/lits/"+lit.id,{disponibilite:!lit.disponibilite});
       }
+
+      public gestLitsSearch(litId: Text):Observable<Array<Lit>>{
+        return this.http.get<Array<Lit>>(this.baseUrl+"/lits/"+litId);
+    }
       
 }

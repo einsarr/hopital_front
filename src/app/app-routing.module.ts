@@ -37,6 +37,7 @@ import { TypestructuresComponent } from './components/structures/typestructures/
 import { NewTypestructureComponent } from './components/structures/new-typestructure/new-typestructure.component';
 import { EditTypestructureComponent } from './components/structures/edit-typestructure/edit-typestructure.component';
 import { LitsdisponibleComponent } from './components/lits/litsdisponible/litsdisponible.component';
+import { LitsearchComponent } from './components/lits/litsearch/litsearch.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path:'admintemplate',component:AdminTemplateComponent, canActivate:[AuthGuard]},
   {path:'signup',component:SignupComponent, canActivate:[AuthGuard]},
   {path:'lits',component:LitsComponent, canActivate:[AuthGuard]},
+  {path:'litsearch',component:LitsearchComponent, canActivate:[AuthGuard]},
   {path:'newlit',component:NewLitComponent, canActivate:[AuthGuard]},
   {path:'editlit/:id',component:EditLitComponent, canActivate:[AuthGuard]},
   {path:'services',component:ServicesComponent, canActivate:[AuthGuard]},
